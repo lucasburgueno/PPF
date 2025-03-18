@@ -24,7 +24,7 @@ const Register = () => {
         <img src="/image.png" alt="Register illustration" />
       </div>
       <div className="register-form-section">
-        <h2>Create your <span className="highlight">SmartDiagnosis</span> account</h2>
+        <h2>Create your <span className="highlight">DesregulatorTool</span> account</h2>
         <p className="login-link">Already have an account? <Link to="/">Sign in</Link></p>
         <input type="text" placeholder="Username" className="register-input" onChange={(e) => setUsername(e.target.value)} />
         <input type="password" placeholder="Password" className="register-input" onChange={(e) => setPassword(e.target.value)} />

@@ -24,7 +24,7 @@ const Login = () => {
         <img src="/image.png" alt="Login illustration" />
       </div>
       <div className="login-form-section">
-        <h2>Sign in to <span className="highlight">SmartDiagnosis</span></h2>
+        <h2>Sign in to <span className="highlight">DesregulatorTool</span></h2>
         <p className="register-link">New user? <Link to="/register">Create an account</Link></p>
         <input type="text" placeholder="Username" className="login-input" onChange={(e) => setUsername(e.target.value)} />
         <input type="password" placeholder="Password" className="login-input" onChange={(e) => setPassword(e.target.value)} />
