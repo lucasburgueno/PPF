@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/login', { username, password });
+      const response = await axios.post('https://ppb-kdz9.onrender.com/login', { username, password });
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard');
     } catch {
@@ -21,37 +21,17 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-image-section">
-        <img 
-          src="/image.png" 
-          alt="Login illustration" 
-        />
+        <img src="/image.png" alt="Login illustration" />
       </div>
-
       <div className="login-form-section">
-        <h2>Sign in to <span className="highlight">DesregulatorTool</span></h2>
+        <h2>Sign in to <span className="highlight">SmartDiagnosis</span></h2>
         <p className="register-link">New user? <Link to="/register">Create an account</Link></p>
-
-        <input 
-          type="text"
-          placeholder="Username"
-          className="login-input"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
-        <input 
-          type="password"
-          placeholder="Password"
-          className="login-input"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
+        <input type="text" placeholder="Username" className="login-input" onChange={(e) => setUsername(e.target.value)} />
+        <input type="password" placeholder="Password" className="login-input" onChange={(e) => setPassword(e.target.value)} />
         <div className="forgot-password">
           <Link to="#">Forgot password?</Link>
         </div>
-
-        <button className="login-button" onClick={handleLogin}>
-          Login
-        </button>
+        <button className="login-button" onClick={handleLogin}>Login</button>
       </div>
     </div>
   );
